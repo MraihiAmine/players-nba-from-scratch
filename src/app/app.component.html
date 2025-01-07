@@ -7,7 +7,7 @@
   <div>
     Display des joeurs:
     @for (player of players; track player.name) {
-      <li>{{player.name}}</li>
+      <app-player [player]="player"></app-player>
     }@empty {
       Pas de joeur à afficher
     }
