@@ -4,12 +4,12 @@
     <input #searchField type="search" id="search" autocomplete="off" placeholder="Search by entering a player name" />
     <em>Player Components Visible: {{players.length}}</em>
   </section>
-  <div >
-    Display the player details: 
+  <div>
+    Display des joeurs:
     @for (player of players; track player.name) {
-      <li>{{ player.name }}</li>
-    } @empty {
-      <p>Sorry, we couldn't find any players with the name you entered</p>
+      <app-player [player]="player"></app-player>
+    }@empty {
+      Pas de joeur à afficher
     }
   </div>
 </search>
